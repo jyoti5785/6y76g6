@@ -45,6 +45,7 @@
     <script src="{{asset('vendor/lightbox2/js/lightbox.min.js')}}"></script>
     <script src="{{asset('js/bootstrap-filestyle.min.js')}}"></script>
     <script src="{{asset('js/front.js')}}"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script>
       // ------------------------------------------------------- //
       //   Inject SVG Sprite - 
