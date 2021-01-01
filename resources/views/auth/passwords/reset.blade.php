@@ -23,6 +23,7 @@
             <div class="container">
                 <div class="signin-content">
                     <div class="signin-image">
+                        <a href="{{url('/')}}">Home</a>
                         <figure><img src="{{asset('images/signin-image.jpg')}}" alt="sing up image"></figure>
                         <a href="{{route('register')}}" class="signup-image-link">Create an account</a>
                     </div>

@@ -68,6 +68,7 @@
                         </form>
                     </div>
                     <div class="signup-image">
+                    <a href="{{url('/')}}">Home</a>
                         <figure><img src="images/signup-image.jpg" alt="sing up image"></figure>
                         <a href="{{route('login')}}" class="signup-image-link">I am already member</a>
                     </div>
