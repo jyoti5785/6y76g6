@@ -35,7 +35,7 @@
     <div class="content">
     @yield('content')
     </div>
-    @include('layouts.partial.footer')
+    <!-- @include('layouts.partial.footer') -->
       <!-- JavaScript files-->
     <script src="{{asset('vendor/jquery/jquery.min.js')}}"></script>
     <script src="{{asset('vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
