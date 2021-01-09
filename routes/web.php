@@ -19,6 +19,9 @@ Route::get('/', function () {
 
 Auth::routes();
 Auth::routes(['verify' => true]);
-Route::group(['middleware' => 'verified'], function () {
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::group(['middleware' => ['verified', 'checkBusinessProfile']], function () {
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('/business-profile', [App\Http\Controllers\Profile\BusinessProfile::class, 'index']);
+
 });
+ Route::get('/complete-business-profile', [App\Http\Controllers\Profile\BusinessProfile::class, 'completeBusinessProfile'])->name('completeBusinessProfile');

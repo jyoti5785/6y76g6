@@ -29,6 +29,15 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
     @toastr_css
     @yield('css')
+    <style>
+        .fa{
+            color: rgb(76, 209, 76);
+            font-size: 2em
+        }
+        .fa:hover{
+            color: rgb(245, 250, 245) !important;
+        }
+    </style>
   </head>
   <body>
     @include('layouts.partial.header')
@@ -48,12 +57,12 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script>
       // ------------------------------------------------------- //
-      //   Inject SVG Sprite - 
-      //   see more here 
+      //   Inject SVG Sprite -
+      //   see more here
       //   https://css-tricks.com/ajaxing-svg-sprite/
       // ------------------------------------------------------ //
       function injectSvgSprite(path) {
-      
+
           var ajax = new XMLHttpRequest();
           ajax.open("GET", path, true);
           ajax.send();
@@ -64,12 +73,12 @@
           document.body.insertBefore(div, document.body.childNodes[0]);
           }
       }
-      // this is set to BootstrapTemple website as you cannot 
+      // this is set to BootstrapTemple website as you cannot
       // inject local SVG sprite (using only 'icons/orion-svg-sprite.svg' path)
       // while using file:// protocol
       // pls don't forget to change to your domain :)
-      injectSvgSprite('https://bootstraptemple.com/files/icons/orion-svg-sprite.svg'); 
-      
+      injectSvgSprite('https://bootstraptemple.com/files/icons/orion-svg-sprite.svg');
+
     </script>
     @toastr_render
     @yield('js')

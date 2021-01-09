@@ -51,4 +51,8 @@ class User extends Authenticatable implements MustVerifyEmail
     {
         $this->notify(new MailResetPasswordNotification($token));
     }
+    public function business()
+    {
+        return $this->hasOne(Business::class);
+    }
 }
