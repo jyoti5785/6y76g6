@@ -18,9 +18,13 @@ class BusinessProfile extends Controller
         $business = Auth::user()->business;
         dd($business);
     }
-    public function completeBusinessProfile(Type $var = null)
+    public function completeBusinessProfile()
     {
         return view('profile.completeBusinessProfile');
+    }
+    public function completeProfile(Request $req)
+    {
+        dd($req->all());
     }
 }
 

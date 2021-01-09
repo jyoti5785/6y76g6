@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Profile\BusinessProfile;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,7 +22,8 @@ Auth::routes();
 Auth::routes(['verify' => true]);
 Route::group(['middleware' => ['verified', 'checkBusinessProfile']], function () {
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-    Route::get('/business-profile', [App\Http\Controllers\Profile\BusinessProfile::class, 'index']);
+    Route::get('/business-profile', [BusinessProfile::class, 'index']);
 
 });
- Route::get('/complete-business-profile', [App\Http\Controllers\Profile\BusinessProfile::class, 'completeBusinessProfile'])->name('completeBusinessProfile');
+ Route::get('/complete-business-profile', [BusinessProfile::class, 'completeBusinessProfile'])->name('completeBusinessProfile');
+ Route::post('/completeProfile', [BusinessProfile::class, 'completeProfile'])->name('completeProfile');
