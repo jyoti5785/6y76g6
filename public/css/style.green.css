@@ -1803,15 +1803,15 @@ STYLE SWITCHER FOR DEMO
 
 .btn-dark {
   color: #fff;
-  background-color: #343a40;
-  border-color: #343a40;
-  box-shadow: 0 2px 2px rgba(52, 58, 64, 0.2) !important;
+  background-color: #429244;
+  border-color: #429244;
+  box-shadow: 0 2px 2px rgba(4, 180, 98, 0.2) !important;
 }
 
 .btn-dark:hover {
   color: #fff;
-  background-color: #23272b;
-  border-color: #1d2124;
+  background-color: #186305;
+  border-color: #186305;
 }
 
 .btn-dark:focus, .btn-dark.focus {

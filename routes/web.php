@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AjaxController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Profile\BusinessProfile;
 
@@ -27,3 +28,4 @@ Route::group(['middleware' => ['verified', 'checkBusinessProfile']], function ()
 });
  Route::get('/complete-business-profile', [BusinessProfile::class, 'completeBusinessProfile'])->name('completeBusinessProfile');
  Route::post('/completeProfile', [BusinessProfile::class, 'completeProfile'])->name('completeProfile');
+Route::post('/ajax-workspace', [AjaxController::class, 'workspace']);
