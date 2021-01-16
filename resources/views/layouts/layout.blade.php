@@ -21,6 +21,7 @@
     <!-- theme stylesheet-->
     <link rel="stylesheet" href="{{asset('css/style.green.css')}}" id="theme-stylesheet">
     <!-- Custom stylesheet - for your changes-->
+    <link href="{{asset('css/select2.min.css')}}" rel="stylesheet" />
     <link rel="stylesheet" href="{{asset('css/custom.css')}}">
     <!-- Favicon-->
     <link rel="shortcut icon" href="img/favicon.png">
@@ -54,6 +55,7 @@
     <script src="{{asset('js/bootstrap-filestyle.min.js')}}"></script>
     <script src="{{asset('js/front.js')}}"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="{{asset('js/select2.min.js')}}"></script>
     <script>
       // ------------------------------------------------------- //
       //   Inject SVG Sprite -

@@ -1,4 +1,20 @@
 @extends('layouts.layout')
+@section('css')
+    <style>
+        .select2-container--default .select2-selection--multiple .select2-selection__choice{
+            background-color: green !important;
+            color: white;
+        }
+        .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+            color: white;
+            border-right: 0px;
+        }
+        .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+            background-color:green;
+            color: white;
+        }
+    </style>
+@endsection
 @section('js')
 <script>
 $(document).ready(function(){
@@ -43,6 +59,13 @@ $(document).ready(function(){
 $("#inputAddress").change(function(){
     readURL(this);
 });
+$(document).ready(function() {
+    $('#businessCategory').select2({
+        placeholder: "Select Business Category",
+        allowClear: true
+    });
+
+});
 </script>
 @endsection
 @section('content')
@@ -61,21 +84,36 @@ $("#inputAddress").change(function(){
                         <div class="form-row">
                             <div class="form-group col-md-6">
                             <label for="inputEmail4">Business Title</label>
-                            <input type="text" name="business_name" class="form-control" id="inputEmail4" placeholder="Email">
+                            <input type="text" name="business_name" class="form-control" id="inputEmail4" placeholder="Business Title">
                             </div>
                             <div class="form-group col-md-6">
                             <label for="inputPassword4">Workspace</label>
-                            <input type="text" name="slug" class="form-control" id="uname_response" placeholder="Password">
+                            <input type="text" value="{{strstr(Auth::user()->email, '@', true)}}" name="slug" class="form-control" id="uname_response" placeholder="Workspace">
                             <div id="uname_response1"></div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                            <label for="inputEmail4">Business Email</label>
+                            <input type="text" name="business_email" class="form-control" id="inputEmail4" placeholder="Business Email">
+                            </div>
+                            <div class="form-group col-md-6">
+                            <label for="inputPassword4">Business Category</label>
+                            <select name="business_category[]" class="form-control" id="businessCategory" placeholder="" multiple>
+                                <option value="1">Food</option>
+                                <option value="2">Tour & travels</option>
+                            </select>
                             </div>
                         </div>
                         <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="inputAddress">Logo</label>
-                            <input type="file" name="logo" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                            <input type="file" name="logo" class="form-control" id="inputAddress" placeholder="Logo">
+                            <img src="{{ asset('img/illustration-3.svg') }}" class="img-thumbnail blah" width="200">
                         </div>
                         <div class="form-group col-md-6">
-                            <img src="{{ asset('assets/img/icon.png') }}" class="img-thumbnail blah" width="200">
+                            <label for="inputEmail4">Business Phone</label>
+                            <input type="text" name="business_phone" class="form-control" id="inputEmail4" placeholder="Business Phone">
                         </div>
                         </div>
                         <div class="form-group">
@@ -89,21 +127,21 @@ $("#inputAddress").change(function(){
                         <div class="form-row">
                             <div class="form-group col-md-6">
                             <label for="inputCity">City</label>
-                            <input type="text" name="address[city]" class="form-control" id="inputCity">
+                            <input type="text" name="address[city]" class="form-control" id="inputCity" placeholder="City">
                             </div>
                             <div class="form-group col-md-4">
                             <label for="inputState">State</label>
-                            <input type="text" name="address[state]" class="form-control" id="inputState">
+                            <input type="text" name="address[state]" class="form-control" id="inputState" placeholder="State">
                             </div>
                             <div class="form-group col-md-2">
                             <label for="inputZip">Zip</label>
-                            <input type="text"  name="address[zip_code]" class="form-control" id="inputZip">
+                            <input type="text"  name="address[zip_code]" class="form-control" id="inputZip" placeholder="Zip">
                             </div>
 
                         </div>
                         <div class="form-group">
                             <label for="inputZip">Country</label>
-                            <input type="text"  name="address[country]" class="form-control" id="inputZip">
+                            <input type="text"  name="address[country]" class="form-control" id="inputZip" placeholder="Country">
                         </div>
 
                         <button type="submit" class="btn btn-primary">Submit</button>
