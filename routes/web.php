@@ -31,7 +31,7 @@ Route::group(['middleware' => ['verified']], function () {
         Route::group(['middleware' => ['checkBusinessProfile']], function () {
             Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
             Route::get('/business-profile', [BusinessProfile::class, 'index'])->name('business-profile');
-            Route::get('/business-blog', [BlogController::class, 'index'])->name('business-catelogue');
+            Route::get('/business-catalogue', [BlogController::class, 'index'])->name('business-catalogue');
             Route::get('/business-store', [StoreController::class, 'index'])->name('business-store');
             Route::get('/business-connection', [ConnectionController::class, 'index'])->name('business-connection');
             Route::get('/business-order', [OrderController::class, 'index'])->name('business-order');

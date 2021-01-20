@@ -24,8 +24,8 @@
                         </a>
 
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{route('business-catelogue')}}">
-                                {{ __('Blog') }}
+                            <a class="dropdown-item" href="{{route('business-catalogue')}}">
+                                {{ __('Catalogue') }}
                             </a>
                             <a class="dropdown-item" href="{{route('business-store')}}">
                                 {{ __('Store') }}
