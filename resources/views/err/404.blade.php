@@ -28,50 +28,7 @@
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
         <style>
-            @import url("https://fonts.googleapis.com/css2?family=Fontdiner+Swanky&family=Roboto:wght@500&display=swap");
 
-$lime: #c5dc50;
-$rasp: #f36a6f;
-$seed: #383838;
-$sm: 1rem;
-$md: 2.5rem;
-$lg: 4rem;
-
-* {
-  box-sizing: 0;
-  margin: 0;
-  padding: 0;
-  cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/4424790/cursors-edge.png"),
-    auto;
-}
-
-body {
-  background: linear-gradient(to right, white 50%, $seed 50%);
-  font-family: "Roboto", sans-serif;
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 1.5;
-  color: white;
-}
-
-div {
-  display: flex;
-  align-items: center;
-  height: 100vh;
-  max-width: 1000px;
-  width: calc(100% - #{$lg});
-  margin: 0 auto;
-  > * {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    max-width: 500px;
-    width: 100%;
-    padding: $md;
-  }
-}
 
 aside {
   background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/4424790/right-edges.png");
