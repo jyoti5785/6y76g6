@@ -200,7 +200,7 @@ h2 {
       </nav>
     </header>
     <!--  Modal -->
-<main>
+<main style="margin-top: 70px;">
   <div class="container">
     <div class="row">
       <div class="col-md-6 align-self-center">
