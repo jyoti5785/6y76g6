@@ -26,7 +26,7 @@ class RedirectIfAuthenticated
                 if(Auth::user()->user_type=='business_account'){
                     return redirect(RouteServiceProvider::HOME);
                 }else{
-                    return redirect('/')
+                    return redirect('/');
                 }
 
             }
