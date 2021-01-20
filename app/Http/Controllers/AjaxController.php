@@ -21,4 +21,8 @@ class AjaxController extends Controller
             return "<span class='text-success'>Available</span>";
         }
     }
+    public function notFound()
+    {
+        # code...
+    }
 }

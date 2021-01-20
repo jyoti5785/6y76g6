@@ -84,18 +84,24 @@ $(document).ready(function() {
                         <div class="form-row">
                             <div class="form-group col-md-6">
                             <label for="inputEmail4">Business Title</label>
-                            <input type="text" name="business_name" class="form-control" id="inputEmail4" placeholder="Business Title">
+                            <input type="text" name="business_name" class="form-control @error('business_name') is-invalid @enderror" value="{{ old('business_name') }}" id="inputEmail4" placeholder="Business Title">
                             </div>
                             <div class="form-group col-md-6">
                             <label for="inputPassword4">Workspace</label>
-                            <input type="text" value="{{strstr(Auth::user()->email, '@', true)}}" name="slug" class="form-control" id="uname_response" placeholder="Workspace">
-                            <div id="uname_response1"></div>
+                            <input type="text" value="{{strstr(Auth::user()->email, '@', true)}}" name="slug" class="form-control @error('slug') is-invalid @enderror" id="uname_response" placeholder="Workspace">
+                            <div id="uname_response1">
+                                @error('slug')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6">
                             <label for="inputEmail4">Business Email</label>
-                            <input type="text" name="business_email" class="form-control" id="inputEmail4" placeholder="Business Email">
+                            <input type="text" name="business_email" class="form-control @error('business_email') is-invalid @enderror" value="{{ old('business_email') }}" id="inputEmail4" placeholder="Business Email">
                             </div>
                             <div class="form-group col-md-6">
                             <label for="inputPassword4">Business Category</label>
@@ -108,40 +114,45 @@ $(document).ready(function() {
                         <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="inputAddress">Logo</label>
-                            <input type="file" name="logo" class="form-control" id="inputAddress" placeholder="Logo">
+                            <input type="file" name="logo" class="form-control @error('logo') is-invalid @enderror" id="inputAddress" placeholder="Logo">
+                               @error('logo')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             <img src="{{ asset('img/illustration-3.svg') }}" class="img-thumbnail blah" width="200">
                         </div>
                         <div class="form-group col-md-6">
                             <label for="inputEmail4">Business Phone</label>
-                            <input type="text" name="business_phone" class="form-control" id="inputEmail4" placeholder="Business Phone">
+                            <input type="text" name="business_phone" class="form-control @error('business_phone') is-invalid @enderror" value="{{ old('business_phone') }}" id="inputEmail4" placeholder="Business Phone">
                         </div>
                         </div>
                         <div class="form-group">
                             <label for="inputAddress">Address</label>
-                            <input type="text" name="address[line1]" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                            <input type="text" name="address[line1]" class="form-control @error('address.line1') is-invalid @enderror" value="{{ old('address.line1') }}" id="inputAddress" placeholder="1234 Main St">
                         </div>
                         <div class="form-group">
                             <label for="inputAddress2">Address 2</label>
-                            <input type="text" name="address[line2]" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                            <input type="text" name="address[line2]" class="form-control @error('address.line2') is-invalid @enderror" value="{{ old('address.line2') }}" id="inputAddress2" placeholder="Apartment, studio, or floor">
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6">
                             <label for="inputCity">City</label>
-                            <input type="text" name="address[city]" class="form-control" id="inputCity" placeholder="City">
+                            <input type="text" name="address[city]" class="form-control @error('address.city') is-invalid @enderror" value="{{ old('address.city') }}" id="inputCity" placeholder="City">
                             </div>
                             <div class="form-group col-md-4">
                             <label for="inputState">State</label>
-                            <input type="text" name="address[state]" class="form-control" id="inputState" placeholder="State">
+                            <input type="text" name="address[state]" class="form-control @error('address.state') is-invalid @enderror" value="{{ old('address.state') }}" id="inputState" placeholder="State">
                             </div>
                             <div class="form-group col-md-2">
                             <label for="inputZip">Zip</label>
-                            <input type="text"  name="address[zip_code]" class="form-control" id="inputZip" placeholder="Zip">
+                            <input type="text"  name="address[zip_code]" class="form-control @error('address.zip_code') is-invalid @enderror" value="{{ old('address.zip_code') }}" id="inputZip" placeholder="Zip">
                             </div>
 
                         </div>
                         <div class="form-group">
                             <label for="inputZip">Country</label>
-                            <input type="text"  name="address[country]" class="form-control" id="inputZip" placeholder="Country">
+                            <input type="text"  name="address[country]" class="form-control @error('address.country') is-invalid @enderror" value="{{ old('address.country') }}" id="inputZip" placeholder="Country">
                         </div>
 
                         <button type="submit" class="btn btn-primary">Submit</button>

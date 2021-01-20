@@ -10,7 +10,7 @@ class Category extends Model
     use HasFactory;
     public function businesses()
     {
-        return $this->belongsToMany(Business::class, 'business_category')->select('*');
+        return $this->belongsToMany(Business::class, 'business_categories')->select('*');
     }
 
 }

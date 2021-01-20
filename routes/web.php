@@ -1,9 +1,13 @@
 <?php
 
 use App\Http\Controllers\AjaxController;
+use App\Http\Controllers\Business\BlogController;
+use App\Http\Controllers\Business\ConnectionController;
+use App\Http\Controllers\Business\OrderController;
+use App\Http\Controllers\Business\StoreController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Profile\BusinessProfile;
-
+use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,11 +25,22 @@ Route::get('/', function () {
 
 Auth::routes();
 Auth::routes(['verify' => true]);
-Route::group(['middleware' => ['verified', 'checkBusinessProfile']], function () {
-    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-    Route::get('/business-profile', [BusinessProfile::class, 'index']);
-
+// $domain = 'admin';
+Route::group(['middleware' => ['verified']], function () {
+    Route::group(['middleware' => ['checkAccount']], function () {
+        Route::group(['middleware' => ['checkBusinessProfile']], function () {
+            Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+            Route::get('/business-profile', [BusinessProfile::class, 'index'])->name('business-profile');
+            Route::get('/business-blog', [BlogController::class, 'index'])->name('business-blog');
+            Route::get('/business-store', [StoreController::class, 'index'])->name('business-store');
+            Route::get('/business-connection', [ConnectionController::class, 'index'])->name('business-connection');
+            Route::get('/business-order', [OrderController::class, 'index'])->name('business-order');
+        });
+    });
+    Route::get('/complete-business-profile', [BusinessProfile::class, 'completeBusinessProfile'])->name('completeBusinessProfile');
+    Route::post('/completeProfile', [BusinessProfile::class, 'completeProfile'])->name('completeProfile');
+    Route::post('/ajax-workspace', [AjaxController::class, 'workspace']);
+    Route::get('/404', [AjaxController::class, 'notFound'])->name('404');
 });
- Route::get('/complete-business-profile', [BusinessProfile::class, 'completeBusinessProfile'])->name('completeBusinessProfile');
- Route::post('/completeProfile', [BusinessProfile::class, 'completeProfile'])->name('completeProfile');
-Route::post('/ajax-workspace', [AjaxController::class, 'workspace']);
+
+

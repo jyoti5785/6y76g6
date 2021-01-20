@@ -25,9 +25,7 @@
     <link rel="stylesheet" href="{{asset('css/custom.css')}}">
     <!-- Favicon-->
     <link rel="shortcut icon" href="img/favicon.png">
-    <!-- Tweaks for older IEs--><!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+
     @toastr_css
     @yield('css')
     <style>
@@ -81,6 +79,7 @@
       injectSvgSprite('https://bootstraptemple.com/files/icons/orion-svg-sprite.svg');
 
     </script>
+    @toastr_js
     @toastr_render
     @yield('js')
     <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->

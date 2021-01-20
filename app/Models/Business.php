@@ -18,6 +18,6 @@ class Business extends Model
     }
     public function categories()
     {
-        return $this->belongsToMany(Category::class, 'business_category')->select('*');
+        return $this->belongsToMany(Category::class, 'business_categories')->select('*');
     }
 }
