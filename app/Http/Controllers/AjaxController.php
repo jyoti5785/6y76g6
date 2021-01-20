@@ -23,6 +23,6 @@ class AjaxController extends Controller
     }
     public function notFound()
     {
-        # code...
+        return view('err.404');
     }
 }
