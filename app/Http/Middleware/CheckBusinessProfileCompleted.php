@@ -17,7 +17,7 @@ class CheckBusinessProfileCompleted
      */
     public function handle(Request $request, Closure $next)
     {
-        if(Auth::user()->business == null){
+        if(Auth::user()->user_type == 'business_account' && Auth::user()->business == null){
             return redirect()->route('completeBusinessProfile');
         }
         return $next($request);
