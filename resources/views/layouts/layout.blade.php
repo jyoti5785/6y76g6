@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="{{asset('vendor/bootstrap-select/css/bootstrap-select.min.css')}}">
     <!-- Lightbox-->
     <link rel="stylesheet" href="{{asset('vendor/lightbox2/css/lightbox.min.css')}}">
+    <link rel="stylesheet" href="{{asset('vendor/fontawesome/css/fontawesome.min.css')}}">
     <!-- theme stylesheet-->
     <link rel="stylesheet" href="{{asset('css/style.green.css')}}" id="theme-stylesheet">
     <!-- Custom stylesheet - for your changes-->
@@ -28,15 +29,7 @@
 
     @toastr_css
     @yield('css')
-    <style>
-        .fa{
-            color: rgb(76, 209, 76);
-            font-size: 2em
-        }
-        .fa:hover{
-            color: rgb(245, 250, 245) !important;
-        }
-    </style>
+
   </head>
   <body>
     @include('layouts.partial.header')
@@ -50,6 +43,7 @@
     <script src="{{asset('vendor/owl.carousel2.thumbs/owl.carousel2.thumbs.min.js')}}"></script>
     <script src="{{asset('vendor/bootstrap-select/js/bootstrap-select.min.js')}}"></script>
     <script src="{{asset('vendor/lightbox2/js/lightbox.min.js')}}"></script>
+    <script src="{{asset('vendor/fontawesome/css/fontawesome.min.js')}}"></script>
     <script src="{{asset('js/bootstrap-filestyle.min.js')}}"></script>
     <script src="{{asset('js/front.js')}}"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>

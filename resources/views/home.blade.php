@@ -1,5 +1,15 @@
 @extends('layouts.layout')
-
+@section('css')
+    <style>
+        .fa{
+            color: rgb(76, 209, 76);
+            font-size: 2em
+        }
+        .fa:hover{
+            color: rgb(245, 250, 245) !important;
+        }
+    </style>
+@endsection
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -14,12 +24,13 @@
                 <div class="col-lg-3 px-lg-2">
                     <div class="categories-item card border-0 shadow mb-4 reset-anchor hover-transition">
                     <div class="card-body px-4 py-5">
-                            <i class="fa fa-bars mb-3" aria-hidden="true"></i>
-                        <h2 class="h5"> <a class="stretched-link reset-anchor-inherit" href="{{route('business-catalogue')}}">Catalogue</a></h2>
+                            <i class="fa fa-users mb-3" aria-hidden="true"></i>
+                        <h2 class="h5"> <a class="stretched-link reset-anchor-inherit" href="{{route('business-connection')}}">Connection</a></h2>
                         <p class="categories-item-number small mb-0">2 Items</p>
                     </div>
                     </div>
                 </div>
+
                 <div class="col-lg-3 px-lg-2">
                     <div class="categories-item card border-0 shadow mb-4 reset-anchor hover-transition">
                     <div class="card-body px-4 py-5">
@@ -29,15 +40,16 @@
                     </div>
                     </div>
                 </div>
-                 <div class="col-lg-3 px-lg-2">
+                <div class="col-lg-3 px-lg-2">
                     <div class="categories-item card border-0 shadow mb-4 reset-anchor hover-transition">
                     <div class="card-body px-4 py-5">
-                            <i class="fa fa-users mb-3" aria-hidden="true"></i>
-                        <h2 class="h5"> <a class="stretched-link reset-anchor-inherit" href="{{route('business-connection')}}">Connection</a></h2>
+                            <i class="fa fa-bars mb-3" aria-hidden="true"></i>
+                        <h2 class="h5"> <a class="stretched-link reset-anchor-inherit" href="{{route('business-catalogue')}}">Catalogue</a></h2>
                         <p class="categories-item-number small mb-0">2 Items</p>
                     </div>
                     </div>
                 </div>
+
                 <div class="col-lg-3 px-lg-2">
                     <div class="categories-item card border-0 shadow mb-4 reset-anchor hover-transition">
                     <div class="card-body px-4 py-5">
