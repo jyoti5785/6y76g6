@@ -2,8 +2,11 @@
 
 use App\Http\Controllers\AjaxController;
 use App\Http\Controllers\Business\BlogController;
+use App\Http\Controllers\Business\BusinessCategory;
 use App\Http\Controllers\Business\ConnectionController;
 use App\Http\Controllers\Business\OrderController;
+use App\Http\Controllers\Business\ProductController;
+use App\Http\Controllers\Business\ReportController;
 use App\Http\Controllers\Business\StoreController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Profile\BusinessProfile;
@@ -33,8 +36,11 @@ Route::group(['middleware' => ['verified']], function () {
             Route::get('/business-profile', [BusinessProfile::class, 'index'])->name('business-profile');
             Route::get('/business-catalogue', [BlogController::class, 'index'])->name('business-catalogue');
             Route::get('/business-store', [StoreController::class, 'index'])->name('business-store');
-            Route::get('/business-connection', [ConnectionController::class, 'index'])->name('business-connection');
+            Route::get('/business-category', [BusinessCategory::class, 'index'])->name('business-category');
+            Route::get('/business-product', [ProductController::class, 'index'])->name('business-product');
             Route::get('/business-order', [OrderController::class, 'index'])->name('business-order');
+            Route::get('/business-report', [ReportController::class, 'index'])->name('business-report');
+            Route::get('/business-connection', [ConnectionController::class, 'index'])->name('business-connection');
         });
     });
     Route::get('/complete-business-profile', [BusinessProfile::class, 'completeBusinessProfile'])->name('completeBusinessProfile');

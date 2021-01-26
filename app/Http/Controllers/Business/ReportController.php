@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Business;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class OrderController extends Controller
+class ReportController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -24,6 +24,6 @@ class OrderController extends Controller
      */
     public function index()
     {
-        return view('store.order.index');
+        return view('store.report.index');
     }
 }

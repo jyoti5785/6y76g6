@@ -17,10 +17,10 @@
         </ul>
     </li> --}}
 
-      <li> <a href="#"><i class="fa fa-columns"></i><span class="nav-label">Categories</span></a> </li>
-      <li> <a href="#"><i class="fab fa-product-hunt"></i><span class="nav-label">Products</span></a> </li>
-      <li> <a href="#"><i class="fab fa-first-order-alt"></i><span class="nav-label">Orders</span></a> </li>
-      <li> <a href="#"><i class="fa fa-file"></i><span class="nav-label">Reports</span></a> </li>
+      <li> <a href="{{route('business-category')}}"><i class="fa fa-columns"></i><span class="nav-label">Categories</span></a> </li>
+      <li> <a href="{{route('business-product')}}"><i class="fab fa-product-hunt"></i><span class="nav-label">Products</span></a> </li>
+      <li> <a href="{{route('business-order')}}"><i class="fab fa-first-order-alt"></i><span class="nav-label">Orders</span></a> </li>
+      <li> <a href="{{route('business-report')}}"><i class="fa fa-file"></i><span class="nav-label">Reports</span></a> </li>
     </ul>
     </div>
     </aside>
