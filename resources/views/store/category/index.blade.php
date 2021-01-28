@@ -17,7 +17,37 @@
                         </div>
                     </div>
                     <div class="col-lg-9 px-lg-2">
-                        <div class="card border-0 shadow mb-4"></div>
+                        <div class="card border-0 shadow mb-4">
+                        <table class="table table-hover">
+                        <thead>
+                            <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Category Name</th>
+                            <th scope="col"></th>
+                            <th scope="col">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                            </tr>
+                            <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                            </tr>
+                            <tr>
+                            <th scope="row">3</th>
+                            <td colspan="2">Larry the Bird</td>
+                            <td>@twitter</td>
+                            </tr>
+                        </tbody>
+                        </table>
+                        </div>
                     </div>
 
                 {{-- <div class="col-lg-12 text-center pt-4"><a class="btn btn-primary" href="#">Show more categories</a></div> --}}

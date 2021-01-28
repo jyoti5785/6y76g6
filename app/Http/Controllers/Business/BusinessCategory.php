@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Business;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Bcategory;
+use Illuminate\Support\Facades\Auth;
 
 class BusinessCategory extends Controller
 {
@@ -24,6 +26,7 @@ class BusinessCategory extends Controller
      */
     public function index()
     {
-        return view('store.category.index');
+        $categories = Bcategory::where('business_id',Auth::user()->business->id)->get();
+        return view('store.category.index', compact('categories'));
     }
 }
