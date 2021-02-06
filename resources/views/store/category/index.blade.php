@@ -17,7 +17,11 @@
                         </div>
                     </div>
                     <div class="col-lg-9 px-lg-2">
+                        
                         <div class="card border-0 shadow mb-4">
+                            <div class="d-flex flex-row-reverse">
+                                <a href="#" class="m-3 p-2 badge badge-success"><i class="fa fa-plus-circle"></i> Add New</a>
+                            </div>
                         <table class="table table-hover">
                         <thead>
                             <tr>
