@@ -58,7 +58,7 @@
                 </li>
                 @else
                 <li class="nav-item">
-                    <a id="" class="nav-link" href="#">
+                    <a id="" class="nav-link" href="{{ 'ctreate-business' }}">
                         Create Business
                     </a>
                 </li>

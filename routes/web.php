@@ -43,6 +43,7 @@ Route::group(['middleware' => ['verified']], function () {
             Route::get('/business-connection', [ConnectionController::class, 'index'])->name('business-connection');
         });
     });
+    Route::get('/create-business', [BusinessProfile::class, 'createBusiness'])->name('create-business');
     Route::get('/complete-business-profile', [BusinessProfile::class, 'completeBusinessProfile'])->name('completeBusinessProfile');
     Route::post('/completeProfile', [BusinessProfile::class, 'completeProfile'])->name('completeProfile');
     Route::post('/ajax-workspace', [AjaxController::class, 'workspace']);

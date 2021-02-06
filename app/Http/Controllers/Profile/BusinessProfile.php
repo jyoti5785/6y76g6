@@ -23,6 +23,11 @@ class BusinessProfile extends Controller
         $business = Auth::user()->business;
         // dd($business);
     }
+    public function createBusiness(Request $req)
+    {
+        $business = Auth::user()->business;
+        // dd($business);
+    }
     public function completeBusinessProfile()
     {
         return view('profile.completeBusinessProfile');
